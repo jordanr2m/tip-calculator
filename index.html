@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+
+  <title>Tip calculator app</title>
+</head>
+
+<body>
+  <main class="calculator">
+    <h1>Tip Calculator</h1>
+    <label for="cost">Cost of my meal/service:</label>
+    <input type="number" id="cost" name="cost" placeholder="$$$">
+
+    <h2>Tip %:</h2>
+    <div class="tip-container">
+      <button class="tip-amount">10</button>
+      <button class="tip-amount">15</button>
+      <button class="tip-amount">18</button>
+      <button class="tip-amount">20</button>
+    </div>
+    <button type="submit" id="submit">Calculate</button>
+
+    <div class="total">
+      <h3>Total:</h3>
+      <p>$<span></span></p>
+    </div>
+
+    <p>Be kind 😊</p>
+  </main>
+
+</body>
+
+</html>
