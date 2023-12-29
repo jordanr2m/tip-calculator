@@ -1,24 +1,23 @@
-const costInput = document.querySelector("#cost");
 const tipButtons = document.querySelectorAll(".tip-amount");
-const submitButton = document.querySelector("#submit");
-const totalPrice = document.querySelector(".price-total span");
+const costInput = document.querySelector("#cost");
 const tipTotal = document.querySelector(".tip-total span");
-
-// Initialize global variable
-let tipAmount;
-// Grab tip % from buttons
-tipButtons.forEach((button) => {
-    button.addEventListener("click", (e) => {
-       tipAmount = Number(e.target.innerText); // Convert string to number
-        // console.log(tipAmount);
-    })
-});
+const totalPrice = document.querySelector(".price-total span");
+const submitButton = document.querySelector("#submit");
 
 function performCalculation() {
     const serviceCost = Number(costInput.value);
-    // Initialize
+    // Initialize variables
     let tip;
     let totalCost;
+    let tipAmount;
+
+    // Grab tip % from buttons
+    tipButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            tipAmount = Number(e.target.innerText);
+            return tipAmount;
+        })
+    })
 
     if (tipAmount === 10) {
         tip = serviceCost * 0.1;
@@ -35,7 +34,7 @@ function performCalculation() {
     }
 
     tipTotal.innerText = tip.toFixed(2);
-    totalPrice.innerText = totalCost.toFixed(2); // Adds or rounds to 2 decimal places
+    totalPrice.innerText = totalCost.toFixed(2);
 };
 
 submitButton.addEventListener("click", (e) => {
