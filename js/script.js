@@ -9,7 +9,7 @@ let tipAmount;
 // Grab tip % from buttons
 tipButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
-       tipAmount = Number(e.target.textContent); // Convert string to number
+       tipAmount = Number(e.currentTarget.textContent); // Convert string to number
         // console.log(tipAmount);
     })
 });
