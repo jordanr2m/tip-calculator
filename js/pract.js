@@ -14,7 +14,7 @@ tipButtons.forEach((button) => {
     })
 });
 
-function performCalculation(tipAmount) {
+function performCalculation() {
     const serviceCost = Number(costInput.value);
     // Initialize
     let tip;
@@ -40,5 +40,5 @@ function performCalculation(tipAmount) {
 
 submitButton.addEventListener("click", (e) => {
     e.preventDefault;
-    performCalculation(tipAmount);
+    performCalculation();
 });
